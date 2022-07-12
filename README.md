@@ -18,6 +18,7 @@
 
   <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/debian.png" style="background-color: red" />
   
+  <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/unity.png" />
   <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/csharp.png" />
   <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/lua.png" />
   <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/html5.png" />
