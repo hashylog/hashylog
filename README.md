@@ -1,22 +1,17 @@
-## Hello :D
-### Good to see you here :)
+<img align='right' src="https://github-readme-stats.vercel.app/api?username=hashylog&show_icons=true&title_color=783c00&text_color=af552e&icon_color=783c00&bg_color=f8efd4&cache_seconds=2300">
+
+### Olá, Bem Vindo ao meu Perfil!
+
+<img src="https://img.shields.io/static/v1?label=Overview&message=hashylog&color=f8efd4&style=for-the-badge&logo=GitHub">
+
+<p>
+
+Me chamo **Miguel**.  
+
+Estudando na **ETEC Aristóteles Ferreira**
+
+Eu sou desenvolvedor **C#**.
 
 
-  <div align="center">
-    <a href="https://github.com/hashylog">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=hashylog&show_icons=true&theme=synthwave&include_all_commits=true&   count_private=true"/>
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hashylog&layout=compact&langs_count=7&theme=dark"/>
-  </div>
-
-  
-  <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/debian.png" />
-  <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/unity.svg">
-  <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/csharp.svg" />
-  <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/lua.png" />
-  <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/html5.png" />
-  <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/javascript.png" />
-  <img align="center" heigh="30" width="40" src="https://github.com/hashylog/hashylog/blob/main/icons/rbxstudio.png" />
-  
-  
-  
-<!--- End -->
+</p>
+<hr>
