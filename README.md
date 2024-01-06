@@ -24,7 +24,7 @@
 
 <p>
   &nbsp &nbsp &nbsp &nbsp 
-  <img align="center" width="500" src="https://github.com/hashylog/hashylog/blob/main/assets/terminal.gif"/>
+  <img align="center" width="500" src="https://github.com/hashylog/hashylog/blob/main/assets/skillsterminal.gif"/>
   &nbsp &nbsp &nbsp &nbsp 
   <img align="center" src="https://github.com/hashylog/hashylog/blob/main/assets/bonecampfire.gif"/>
 </p>
