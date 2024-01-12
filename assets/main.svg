@@ -170,12 +170,19 @@
 
       @media (prefers-color-scheme: light) {
         .body {
-          --color-main: #9B5DE5;
-          --color-primary: #F15BB5;
-          --color-secondary: #00BBF9;
+          --color-main: #0fbd51;
+          --color-primary: #0fbd51;
+          --color-secondary: #0fbd51;
+          --color-background: #0d1117;
+          --color-link: #c0bfbb;
+          --color-link-active: #000000;
+
+          --color-main: #0fbd51;
+          --color-primary: #0fbd51;
+          --color-secondary: #0fbd51;
           --color-background: #ffffff;
-          --color-link: #00BBF9;
-          --color-link-active: #F15BB5;
+          --color-link: #000000;
+          --color-link-active: #000000;
         }
       }
 
