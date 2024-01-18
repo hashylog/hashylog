@@ -131,6 +131,10 @@
         color: var(--color-link);
       }
 
+      p {
+	color: var(--color-background);
+      }
+	    
       .hi {
         display: inline-block;
         transform-origin: 70% 70%;
@@ -226,11 +230,18 @@
           <ul>
             <li>High School With Professional Qualification</li>
           </ul>
-	        <ul>
+	  <ul>
             <li>In Digital Game Programming Technician</li>
           </ul>
-	        <ul>
+	  <ul>
             <li>Brazilian Computer Engineering Student</li>
+          </ul>
+	  <ul>
+            <p>.</p>
+	    <p>.</p>
+          </ul>
+	  <ul>
+            <li>DISCORD: hashylog</li>
           </ul>
         </section>
       </div>
