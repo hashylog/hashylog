@@ -86,6 +86,19 @@ export default function Home() {
           </h1>
         </div>
 
+        {/* Description */}
+        <p
+          className="animate-in-delay-1"
+          style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: "13px",
+            color: "var(--muted)",
+            letterSpacing: "0.04em",
+          }}
+        >
+          game <span style={{ color: "var(--accent)" }}>&</span> software developer
+        </p>
+
         {/* Divider */}
         <div
           className="animate-in-delay-1"
