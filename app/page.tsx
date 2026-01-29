@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import DotGrid from "./components/DotGrid";
 
 const socials = [
   { label: "github", href: "https://github.com/hashylog" },
@@ -58,6 +59,7 @@ export default function Home() {
 
   return (
     <div className="grain relative flex min-h-screen items-center justify-center">
+      <DotGrid />
       <button
         onClick={toggleTheme}
         className="theme-toggle animate-in-delay-3"
