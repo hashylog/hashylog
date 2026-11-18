@@ -29,6 +29,14 @@ float hash(vec2 p) {
   return fract(p.x * p.y);
 }
 
+// Well-distributed 1D hash (no visible periodicity on integer inputs).
+float hash11(float p) {
+  p = fract(p * 0.1031);
+  p *= p + 33.33;
+  p *= p + p;
+  return fract(p);
+}
+
 float noise(vec2 p) {
   vec2 i = floor(p);
   vec2 f = fract(p);
@@ -93,6 +101,9 @@ void main() {
 
   // Keep the center calm so the text stays legible, edges brighter.
   vec2 c = (gl_FragCoord.xy - 0.5 * u_res) / base;
+  // While the fragments are on screen, the calm area follows them to the left.
+  float fragPhase = smoothstep(0.14, 0.24, u_scroll) * (1.0 - smoothstep(0.66, 0.78, u_scroll));
+  c.x += fragPhase * max(0.0, 0.5 * u_res.x / base - 0.35);
   float center = smoothstep(0.05, 0.75, length(c * vec2(0.75, 1.25)));
   v *= mix(0.35, 1.0, center);
 
@@ -105,14 +116,25 @@ void main() {
 
   // Rain appears once the name has dissolved.
   float rain = smoothstep(0.22, 0.75, u_scroll);
-  float colH = hash(vec2(px.x, 7.0));
-  if (colH < 0.06 * rain) {
-    float speed = 90.0 + hash(vec2(px.x, 3.0)) * 160.0;
-    float len = 4.0 + hash(vec2(px.x, 5.0)) * 10.0;
-    float period = 60.0 + hash(vec2(px.x, 11.0)) * 160.0;
-    float y = mod(px.y + t * speed + hash(vec2(px.x, 13.0)) * 500.0, period);
-    if (y < len) {
-      v = max(v, (0.25 + 0.45 * (1.0 - y / len)) * rain);
+  float cx = px.x;
+  if (hash11(cx * 1.37 + 11.0) < 0.075 * rain) {
+    // Each column gets its own depth: far drops are slower, shorter, dimmer.
+    float depth = hash11(cx * 0.73 + 101.7);
+    float speed = mix(60.0, 210.0, depth) * (0.85 + 0.3 * hash11(cx + 7.9));
+    float period = 120.0 + hash11(cx * 2.11 + 57.3) * 320.0;
+    float pos = px.y + t * speed + hash11(cx + 313.1) * 2000.0;
+    float cycle = floor(pos / period);
+    float y = pos - cycle * period;
+    // Every pass of a column is rolled independently, so drops never line up.
+    float roll = hash11(cycle * 7.13 + cx * 0.618 + 3.0);
+    if (roll < 0.6) {
+      float len = mix(4.0, 14.0, depth) * (0.6 + 0.8 * hash11(cycle * 1.7 + cx * 3.1));
+      float offset = hash11(cycle * 4.3 + cx) * (period - len);
+      float yy = y - offset;
+      if (yy >= 0.0 && yy < len) {
+        float bright = mix(0.28, 0.66, depth) * (0.8 + 0.2 * roll / 0.6);
+        v = max(v, bright * (1.0 - yy / len) * rain + 0.06);
+      }
     }
   }
 

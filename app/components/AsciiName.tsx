@@ -7,7 +7,7 @@ const NAME = "hashylog";
 const RAMP = " .:-=+*#%@";
 const GLITCH = "!<>-_/\\[]{}=+*^?#%@$&01";
 const RAIN = "|:.'";
-const NAME_FONT = '"Instrument Serif", serif';
+const NAME_FONT = '"Pixelify Sans", monospace';
 const GLYPH_FONT = '"JetBrains Mono", monospace';
 
 interface Cell {
@@ -76,12 +76,12 @@ export default function AsciiName() {
       // Rasterize the name once, then sample its coverage per character cell.
       const off = document.createElement("canvas");
       const octx = off.getContext("2d", { willReadFrequently: true })!;
-      octx.font = `italic 400 100px ${NAME_FONT}`;
+      octx.font = `700 100px ${NAME_FONT}`;
       const probe = octx.measureText(NAME);
       const probeW = probe.actualBoundingBoxLeft + probe.actualBoundingBoxRight;
       const size = (100 * targetW * 0.96) / probeW;
 
-      octx.font = `italic 400 ${size}px ${NAME_FONT}`;
+      octx.font = `700 ${size}px ${NAME_FONT}`;
       const m = octx.measureText(NAME);
       const textW = m.actualBoundingBoxLeft + m.actualBoundingBoxRight;
       const textH = m.actualBoundingBoxAscent + m.actualBoundingBoxDescent;
@@ -93,7 +93,7 @@ export default function AsciiName() {
 
       off.width = Math.ceil(gridW);
       off.height = Math.ceil(gridH);
-      octx.font = `italic 400 ${size}px ${NAME_FONT}`;
+      octx.font = `700 ${size}px ${NAME_FONT}`;
       octx.fillStyle = "#fff";
       octx.fillText(
         NAME,
@@ -240,7 +240,7 @@ export default function AsciiName() {
 
     let cancelled = false;
     const fontsReady = Promise.all([
-      document.fonts.load(`italic 100px ${NAME_FONT}`),
+      document.fonts.load(`700 100px ${NAME_FONT}`),
       document.fonts.load(`10px ${GLYPH_FONT}`),
     ]).catch(() => undefined);
     const timeout = new Promise((resolve) => setTimeout(resolve, 2500));

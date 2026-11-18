@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import AsciiName from "./components/AsciiName";
 import CloudField from "./components/CloudField";
+import Lily from "./components/Lily";
 import ScrollDriver from "./components/ScrollDriver";
 
 const socials = [
@@ -12,8 +13,8 @@ const socials = [
 
 // Lines that surface while scrolling, each visible between `from` and `to`.
 const fragments = [
-  { index: "i.", text: "some things only exist in the noise", from: 0.2, to: 0.42 },
-  { index: "ii.", text: "and fade as quietly as they came", from: 0.46, to: 0.68 },
+  { index: "i can't let your memory die.", text: "i hope you find what you're fighting for", from: 0.2, to: 0.42 },
+  { index: "you are my endless.", text: "you are my endless.", from: 0.46, to: 0.68 },
 ];
 
 function Links() {
@@ -69,6 +70,7 @@ export default function Home() {
       ))}
 
       <section className="stage stage-end">
+        <Lily />
         <p className="end-name">hashylog</p>
         <Links />
         <p className="end-note">&copy; {new Date().getFullYear()} &middot; still drifting</p>
